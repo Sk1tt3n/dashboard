@@ -29,18 +29,18 @@
     <body>
         <table style="width:100%">
             <tr>
+                <th>Turn On/Off Instance</th>
                 <th>Instance Id</th>
                 <th>Instance Type</th>
                 <th>Monitoring State</th>
-                <th>Turn On/Off Instance</th>
             </tr>
             <ul>
                 {% for x in instances['Instances']: %}
                 <tr>
+                    <td align='center'> <form><input type=submit style="background-color:red" value="click me"></form></td>
                     <td>{{ x.split("|")[0].replace("Instance Id:", "") }}</td>
                     <td>{{ x.split("|")[1].replace("Instance Type:", "") }}</td>
                     <td>{{ x.split("|")[2].replace("Instance Monitoring State:", "") }}</td>
-                    <td align='center'><form><input type=submit value="click me"></form></td>
                   </tr>
             {% endfor %}
             </ul>
