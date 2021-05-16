@@ -37,7 +37,7 @@
             <ul>
                 {% for x in instances['Instances']: %}
                 <tr>
-                    <td align='center'> <form><input type=submit style="background-color:red" value="click me"></form></td>
+                    <td align='center'> <form><input type=submit onclick="turnOnOffInstance(this)" style="background-color:red" value="click me"></form></td>
                     <td>{{ x.split("|")[0].replace("Instance Id:", "") }}</td>
                     <td>{{ x.split("|")[1].replace("Instance Type:", "") }}</td>
                     <td>{{ x.split("|")[2].replace("Instance Monitoring State:", "") }}</td>
